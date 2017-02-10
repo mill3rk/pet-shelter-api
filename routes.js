@@ -18,14 +18,14 @@ module.exports = [
     {
         method: 'POST',
         path:'/pets',
-        validate: {
-            payload: {
-                name: Joi.string().required().min(3).max(255),
-                location: Joi.string().required().min(3).max(255),
-                longitude: Joi.string().regex(LatLongRegExPattern),
-                latitude: Joi.string().regex(LatLongRegExPattern)
-            }
-        }, 
+        // validate: {
+        //     payload: {
+        //         name: Joi.string().required().min(3).max(255),
+        //         location: Joi.string().required().min(3).max(255),
+        //         longitude: Joi.string().regex(LatLongRegExPattern),
+        //         latitude: Joi.string().regex(LatLongRegExPattern)
+        //     }
+        // }, 
         handler: PetsRepo.pets.store
     }
 ];

@@ -3,12 +3,14 @@
 const Hapi = require('hapi');
 const Models = require('./models');
 const Routes = require('./routes');
+const ENV = process.env.NODE_ENV || 'development';
+const Config = require('./config/config.json')[ENV];
 
 // Create a server with a host and port
 const server = new Hapi.Server();
 server.connection({ 
-    host: 'localhost', 
-    port: 8000 
+    host: process.env.IP || Config.host, 
+    port: process.env.PORT || Config.port
 });
 
 // Add the route
