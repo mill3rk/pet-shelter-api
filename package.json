@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kris Miller",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^16.1.0",
+    "joi": "^10.2.2"
+  }
 }
