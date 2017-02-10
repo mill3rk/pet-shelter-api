@@ -1,0 +1,11 @@
+{
+  "name": "pet_shelter_api",
+  "version": "1.0.0",
+  "description": "Pet Shelter API",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kris Miller",
+  "license": "ISC"
+}
