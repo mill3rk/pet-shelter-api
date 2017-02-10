@@ -7,24 +7,21 @@ module.exports = [
         method: 'GET',
         path:'/pets', 
         handler: function (request, reply) {
-
-            return reply('Pets index');
+            reply('Pets index');
         }
     },
     {
         method: 'GET',
         path:'/pets/{id}', 
         handler: function (request, reply) {
-
-            return reply('Pet show');
+            reply('Pet show');
         }
     },
     {
         method: 'POST',
         path:'/pets', 
         handler: function (request, reply) {
-
-            return reply('Create Pet');
+            reply('Create Pet');
         }
     }
 ];
