@@ -1,21 +1,21 @@
-var models = require('../models');
+const models = require('../models');
 
 exports.pets = {
-  all: function(request, reply) {
+  all: (request, reply) => {
     models.Pet.findAll()
-      .then(function(pets) {
+      .then((pets) => {
         reply(pets).code(200);
       });
   },
-  byId: function(request, reply) {
+  byId: (request, reply) => {
     models.Pet.findById(request.params.id)
-      .then(function(pet) {
+      .then((pet) => {
         reply(pet).code(200);
       });
   },
-  store: function(request, reply) {
+  store: (request, reply) => {
     models.Pet.create(request.payload)
-      .then(function(pet) {
+      .then((pet) => {
         reply(pet).code(200);
       });
   }

@@ -1,12 +1,13 @@
 'use strict';
+
 module.exports = {
   up: function(queryInterface, Sequelize) {
     return queryInterface.createTable('pets', {
       id: {
         allowNull: false,
-        autoIncrement: true,
+        autoIncrement: false,
         primaryKey: true,
-        type: Sequelize.STRING
+        type: Sequelize.UUID
       },
       name: {
         type: Sequelize.STRING
@@ -19,6 +20,14 @@ module.exports = {
       },
       latitude: {
         type: Sequelize.STRING
+      },
+      typeId: {
+        allowNull: false,
+        type: Sequelize.UUID
+      },
+      breedId: {
+        allowNull: false,
+        type: Sequelize.UUID
       },
       createdAt: {
         allowNull: false,

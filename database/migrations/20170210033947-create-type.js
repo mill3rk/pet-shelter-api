@@ -1,12 +1,12 @@
 'use strict';
+
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('breeds', {
+    return queryInterface.createTable('types', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.STRING
+        type: Sequelize.UUID
       },
       name: {
         type: Sequelize.STRING
@@ -22,6 +22,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('breeds');
+    return queryInterface.dropTable('types');
   }
 };

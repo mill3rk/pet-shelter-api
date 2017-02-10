@@ -1,22 +1,21 @@
 'use strict';
 
-const Hapi = require('hapi');
-const Models = require('./models');
-const Routes = require('./routes');
-const ENV = process.env.NODE_ENV || 'development';
-const Config = require('./config/config.json')[ENV];
+const Hapi   = require('hapi');
+const models = require('./models');
+const routes = require('./routes');
+const config = require('./config/config.json')[(process.env.NODE_ENV || 'development')];
 
 // Create a server with a host and port
 const server = new Hapi.Server();
 server.connection({ 
-    host: process.env.IP || Config.host, 
-    port: process.env.PORT || Config.port
+    host: process.env.IP || config.host, 
+    port: process.env.PORT || config.port
 });
 
 // Add the route
-server.route(Routes);
+server.route(routes);
 
-Models.sequelize.sync().then(function() {
+models.sequelize.sync().then(function() {
     // Start the server
     server.start((err) => {
     
