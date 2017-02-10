@@ -8,9 +8,9 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        // create one to one relationship
+        // create one to one relationship with a type
         Pet.hasOne(models.Type);
-        // create one to one relationship
+        // create one to one relationship with a breed
         Pet.hasOne(models.Breed);
       }
     }
