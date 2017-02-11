@@ -6,15 +6,14 @@ module.exports = {
         {
           id: 1,
           name: 'Dog',
-          createdAt: Date.now(),
-          updatedAt: Date.now()
+          createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updatedAt: Sequelize.literal('CURRENT_TIMESTAMP')
         },
         {
           id: 2,
           name: 'Cat',
-          createdAt: Date.now(),
-          updatedAt: Date.now()
-          
+          createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updatedAt: Sequelize.literal('CURRENT_TIMESTAMP')
         }
       ], {});
   },

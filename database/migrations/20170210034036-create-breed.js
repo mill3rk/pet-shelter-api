@@ -2,16 +2,17 @@
 
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('breeds', {
+    return queryInterface.createTable('Breeds', {
       id: {
         allowNull: false,
-        primaryKey: true,
-        type: Sequelize.UUID
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV1,
+        primaryKey: true
       },
       name: {
         type: Sequelize.STRING
       },
-      typeId: {
+      TypeId: {
         allowNull: false,
         type: Sequelize.UUID
       },
@@ -26,6 +27,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('breeds');
+    return queryInterface.dropTable('Breeds');
   }
 };
