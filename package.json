@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "postinstall": "sequelize db:migrate && sequelize db:seed:all"
+    "postinstall": "sequelize init && sequelize db:migrate && sequelize db:seed:all"
   },
   "author": "Kris Miller",
   "license": "ISC",

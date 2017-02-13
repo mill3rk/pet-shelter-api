@@ -1,0 +1,20 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./db.development.sqlite",
+    "host": "127.0.0.1",
+    "port": "8000"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "./db.development.sqlite",
+    "host": "127.0.0.1",
+    "port": "8000"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./db.development.sqlite",
+    "host": "127.0.0.1",
+    "port": "8000"
+  }
+}
