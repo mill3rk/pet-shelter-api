@@ -14,5 +14,9 @@
     "joi": "^10.2.2",
     "sequelize": "^3.30.2",
     "sequelize-cli": "^2.5.1"
+  },
+  "engines": {
+    "node": "7.5.0",
+    "npm": "4.2.0"
   }
 }
