@@ -13,10 +13,10 @@ module.exports = (Sequelize, DataTypes) => {
       classMethods: {
         associate: (models) => {
           // create one to one relationship with a type
-          Pet.belongsTo(models.Type);
+          Pet.belongsTo(models.Type, {foreignKey: 'typeId'});
           
           // create one to one relationship with a breed
-          Pet.belongsTo(models.Breed);
+          Pet.belongsTo(models.Breed, {foreignKey: 'breedId'});
         }
       }
     }

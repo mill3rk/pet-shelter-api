@@ -20,8 +20,8 @@ module.exports = {
           location: "Toronto, ON, Canada",
           longitude: "43.661390",
           latitude: "-79.357962",
-          BreedId: 3,
-          TypeId: 1,
+          breedId: 3,
+          typeId: 1,
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP')
         },
@@ -31,8 +31,8 @@ module.exports = {
           location: "Regina, SK, Canada",
           longitude: "50.492779",
           latitude: "-104.624561",
-          BreedId: 4,
-          TypeId: 1,
+          breedId: 4,
+          typeId: 1,
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP')
         },
@@ -42,8 +42,8 @@ module.exports = {
           location: "New York, NY, USA",
           longitude: "40.753046",
           latitude: "-73.982237",
-          BreedId: 1,
-          TypeId: 2,
+          breedId: 1,
+          typeId: 2,
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP')
         },
@@ -53,8 +53,8 @@ module.exports = {
           location: "Toronto, ON, Canada",
           longitude: "43.657859",
           latitude: "-79.350255",
-          BreedId: 6,
-          TypeId: 2,
+          breedId: 6,
+          typeId: 2,
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP')
         },

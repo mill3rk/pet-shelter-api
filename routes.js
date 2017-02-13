@@ -15,19 +15,30 @@ module.exports = [
     {
         method: 'GET',
         path:'/pets/{id}', 
-        handler: petsRepo.pets.byId
+        handler: petsRepo.pets.byId,
+        config: {
+            validate: {
+                params: {
+                    id: Joi.number()
+                }
+            }
+        }
     },
     {
         method: 'POST',
         path:'/pets',
-        // validate: {
-        //     payload: {
-        //         name: Joi.string().required().min(3).max(255),
-        //         location: Joi.string().required().min(3).max(255),
-        //         longitude: Joi.string().regex(latLongRegExPattern),
-        //         latitude: Joi.string().regex(latLongRegExPattern)
-        //     }
-        // }, 
+        config: {
+            validate: {
+                payload: {
+                    name: Joi.string().required().min(3).max(255),
+                    location: Joi.string().required().min(3).max(255),
+                    breedId: Joi.number().required(),
+                    typeId: Joi.number().required(),
+                    longitude: Joi.string().required().regex(latLongRegExPattern),
+                    latitude: Joi.string().required().regex(latLongRegExPattern)
+                }
+            }
+        }, 
         handler: petsRepo.pets.store
     },
     {

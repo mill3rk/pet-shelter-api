@@ -5,29 +5,33 @@ module.exports = {
     return queryInterface.createTable('Pets', {
       id: {
         allowNull: false,
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV1,
-        primaryKey: true
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       location: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       longitude: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       latitude: {
+        allowNull: false,
         type: Sequelize.STRING
       },
-      TypeId: {
+      typeId: {
         allowNull: false,
-        type: Sequelize.UUID
+        type: Sequelize.INTEGER
       },
-      BreedId: {
+      breedId: {
         allowNull: false,
-        type: Sequelize.UUID
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

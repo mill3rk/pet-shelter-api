@@ -9,7 +9,13 @@ const config = require('./config/config.json')[(process.env.NODE_ENV || 'develop
 const server = new Hapi.Server();
 server.connection({ 
     host: process.env.IP || config.host, 
-    port: process.env.PORT || config.port
+    port: process.env.PORT || config.port,
+    routes: {
+        cors: {
+          origin: ['*'],
+          additionalHeaders: ['cache-control', 'x-requested-with']
+        }
+      }
 });
 
 // Add the route

@@ -8,7 +8,7 @@ module.exports = ( sequelize, DataTypes ) => {
       classMethods: {
         associate: (models) => {
           // create one to one relationship
-          Breed.belongsTo(models.Type);
+          Breed.belongsTo(models.Type, {foreignKey: 'typeId'});
         }
       }
     }

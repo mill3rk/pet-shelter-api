@@ -2,7 +2,12 @@ const models = require('../models');
 
 exports.pets = {
   all: (request, reply) => {
-    models.Pet.findAll()
+    models.Pet.findAll({
+        include: [ 
+          models.Breed,
+          models.Type,
+        ]
+      })
       .then((pets) => {
         reply(pets).code(200);
       });
@@ -14,8 +19,9 @@ exports.pets = {
       });
   },
   store: (request, reply) => {
+    console.log(request.payload.name);
     models.Pet.create(request.payload)
-      .then((pet) => {
+      .then((pet) => {console.log('success');
         reply(pet).code(200);
       });
   }
